@@ -1,0 +1,28 @@
+/* Home Callout
+=============================== */
+
+.home-callout {
+	margin-top: 40px;
+	text-align: center;
+	h1 {
+		font-size: 48px;
+		margin: 0 0 10px 0;
+	}
+	p {
+		font-weight: 100;
+		font-size: 20px;
+		margin: 0;
+		span {
+			color: $medium-blue;
+			font-weight: 700;
+			border-bottom: 2px solid $medium-blue;
+		}
+	}
+	figure {
+		margin-top: 40px;
+	}
+	img {
+		max-width: 769px;
+		width: 100%;
+	}
+}

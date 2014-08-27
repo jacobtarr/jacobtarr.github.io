@@ -1,0 +1,24 @@
+/* About Section
+=============================== */
+
+.about-section {
+	margin-top: 40px;
+	.lead-in {
+		font-family: "Adelle", serif;
+		font-size: 22px;
+		margin-top: 40px;
+	}
+}
+
+/* Intro Section */
+.about-section-intro {
+	@include clearfix;
+	img {
+		float: right;
+		margin-left: 15px;
+		@media (max-width: 480px) {
+			max-height: 120px;
+			max-width: 120px;
+		}
+	}
+}

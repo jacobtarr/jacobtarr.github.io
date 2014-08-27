@@ -1,0 +1,108 @@
+/* Custom Animations
+=============================== */
+
+
+/* Animate skill bars
+=============================== */
+
+/* Animate to 10% of full skill bar */
+@include keyframes (skill-10-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 10%; }
+}
+
+/* Animate to 20% of full skill bar */
+@include keyframes (skill-20-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 20%; }
+}
+
+/* Animate to 30% of full skill bar */
+@include keyframes (skill-30-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 30%; }
+}
+
+/* Animate to 40% of full skill bar */
+@include keyframes (skill-40-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 40%; }
+}
+
+/* Animate to 50% of full skill bar */
+@include keyframes (skill-50-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 50%; }
+}
+
+/* Animate to 60% of full skill bar */
+@include keyframes (skill-60-animate) {
+	from  	{ width: 0%; }
+	to 		{ width: 60%; }
+}
+
+/* Animate to 70% of full skill bar */
+@include keyframes (skill-70-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 70%; }
+}
+
+/* Animate to 80% of full skill bar */
+@include keyframes (skill-80-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 80%; }
+}
+
+/* Animate to 90% of full skill bar */
+@include keyframes (skill-90-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 90%; }
+}
+
+/* Animate to 100% of full skill bar */
+@include keyframes (skill-100-animate) {
+	from   	{ width: 0%; }
+	to 		{ width: 100%; }
+}
+
+/* Create animation class for specific animation state for skill bar */
+.skill10Animate { @include animation(skill-10-animate 3s linear); }
+.skill20Animate { @include animation(skill-20-animate 3s linear); }
+.skill30Animate { @include animation(skill-30-animate 3s linear); }
+.skill40Animate { @include animation(skill-40-animate 3s linear); }
+.skill50Animate { @include animation(skill-50-animate 3s linear); }
+.skill60Animate { @include animation(skill-60-animate 3s linear); }
+.skill70Animate { @include animation(skill-70-animate 3s linear); }
+.skill80Animate { @include animation(skill-80-animate 3s linear); }
+.skill90Animate { @include animation(skill-90-animate 3s linear); }
+.skill100Animate { @include animation(skill-100-animate 3s linear); }
+
+
+/* Animate ribbon headings
+=============================== */
+
+/* Animate width of ribbon */
+@include keyframes (ribbon-animate) {
+	from   	{ max-width: 150px; }
+	to 		{ max-width: 890px; }
+}
+
+@include keyframes (ribbon-text-animate) {
+	from   	{ opacity: 0; }
+	to 		{ opacity: 1; }
+}
+
+/* Create animation class for ribbon */
+.ribbonAnimate { @include animation(ribbon-animate 2s ease-in); }
+.ribbonTextAnimate { @include animation(ribbon-text-animate 2s ease-in); }
+
+
+
+
+
+
+
+
+
+
+
