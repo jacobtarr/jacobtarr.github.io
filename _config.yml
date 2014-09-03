@@ -6,6 +6,7 @@ baseurl: ""
 url: "http://yourdomain.com"
 sass:
   sass_dir: stylesheets
+  style: :expanded
 
 # Build settings
 markdown: kramdown
