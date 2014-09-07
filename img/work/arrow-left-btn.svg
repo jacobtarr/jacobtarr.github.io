@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-left-btn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Work-Section" sketch:type="MSArtboardGroup" transform="translate(-120.000000, -535.000000)">
+            <g id="arrow-left-btn" sketch:type="MSLayerGroup" transform="translate(120.000000, 535.000000)">
+                <circle id="Oval-46" fill="#3098DB" sketch:type="MSShapeGroup" cx="45" cy="45" r="45"></circle>
+                <g id="arrow-icon" transform="translate(22.000000, 27.000000)" fill="#FFFFFF" sketch:type="MSShapeGroup">
+                    <path d="M47.0000017,16.9909996 L3.39,16.991 L18.921,1.46 L17.493,0.032 L-0.476,18 L17.493,35.969 L18.921,34.543 L3.389,19.009 L47.0000017,19.0089993 L47.0000017,16.9909996 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
