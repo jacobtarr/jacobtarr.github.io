@@ -1,6 +1,6 @@
 /* FlowType JS config
 =============================== */
-$(document).ready(function() {
+$(function() {
 	$('.header-menu').flowtype({
 		minimum   : 320,
 		maximum   : 768,
@@ -43,7 +43,21 @@ $(document).ready(function() {
 new WOW().init();
 
 
-
+/* Set Slick slider settings
+=============================== */
+$(function(){
+	$('.project-gallery').slick({
+		speed: 300,
+		slide: 'figure',
+		fade: true,
+		prevArrow: '<a>' +
+				   '<img class="project-gallery-arrow-prev" src="../img/work/arrow-left-btn.svg">' +
+				   '</a>',
+		nextArrow: '<a>' +
+				   '<img class="project-gallery-arrow-next" src="../img/work/arrow-right-btn.svg">' +
+				   '</a>'
+	});
+});
 
 
 

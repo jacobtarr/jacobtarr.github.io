@@ -16,6 +16,9 @@ header {
 			opacity: 0.8;
 			@include transition(.2s ease);
 		}
+		@media (max-width: 480px) {
+			width: 70%;
+		}
 	}
 }
 

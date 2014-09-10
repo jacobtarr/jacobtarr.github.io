@@ -1,0 +1,82 @@
+/* Work Section
+=============================== */
+
+.work-section {
+	margin-top: 40px;
+}
+
+.project-info {
+	max-width: 800px;
+	margin: 40px auto 0;
+	h2 {
+		text-align: center;
+		margin: 0 0 50px 0;
+	}
+}
+
+.project-facts {
+	padding: 0;
+	font-size: 22px;
+}
+
+.project-fact {
+	@include display(flex);
+	@include align-content(stretch);
+	margin-bottom: 40px;
+}
+
+.project-fact-title {
+	@include flex-grow(2);
+	max-width: 300px;
+	width: 100%;
+	font-weight: 700;
+}
+
+.project-fact-description {
+	@include flex-grow(1);
+	text-align: right;
+	font-weight: 500;
+	color: #999;
+	max-width: 500px;
+}
+
+/* Project Gallery
+=============================== */
+
+.slick-slide img {
+	margin: 0 auto;
+}
+
+img[class*="project-gallery-arrow"] {
+	position: absolute;
+	display: block;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	top: 20%;
+	cursor: pointer;
+	&:hover {
+		opacity: 0.8;
+		@include transition(0.2s);
+	}
+}
+
+.project-gallery-arrow-prev {
+	left: 0;
+}
+
+.project-gallery-arrow-next {
+	right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
