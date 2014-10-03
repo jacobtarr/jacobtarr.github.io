@@ -4,33 +4,25 @@
 		<div class="top-footer-content row">
 			<div class="top-footer-item col-sm-4">
 				<h5>About</h5>
-				<p>
-					I'm a freelance web designer with a focus in frontend technologies such as HTML, CSS, and JavaScript and responsive web design so that your website looks great on any device.
-				</p>
+				<p>{{ site.data.settings.footer_about_brief }}</p>
 			</div>
 			<div class="top-footer-item col-sm-4">
 				<h5>Sitemap</h5>
 				<ul>
-					<li><a href="../about">About</a></li>
-					<li><a href="../work">Work</a></li>
-					<li><a href="../blog">Blog</a></li>
-					<li><a href="../contact">Contact</a></li>
+					{% for footer_sitemap_link in site.data.settings.footer_sitemap_links %}
+					<li>
+						<a href="{{ footer_sitemap_link.url_link }}">{{ footer_sitemap_link.name }}</a>
+					</li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="top-footer-item col-sm-4">
 				<h5>Follow Me!</h5>
-				<a class="top-footer-icon" target="_blank" href="http://twitter.com/jacobtarr">
-					<img src="../img/global/twitter-icon.svg">
+				{% for footer_icon in site.data.settings.footer_icons %}
+				<a class="top-footer-icon" target="_blank" href="{{ footer_icon.url_link }}">
+					<img src="{{ footer_icon.img_link }}">
 				</a>
-				<a class="top-footer-icon" target="_blank" href="http://facebook.com/jtarr523">
-					<img src="../img/global/facebook-icon.svg">
-				</a>
-				<a class="top-footer-icon" target="_blank" href="http://dribbble.com/jacobtarr">
-					<img src="../img/global/dribbble-icon.svg">
-				</a>
-				<a class="top-footer-icon" target="_blank" href="http://linkedin.com/in/jacobtarr">
-					<img src="../img/global/linkedin-icon.svg">
-				</a>
+				{% endfor %}
 			</div>
 		</div>
 	</section>
@@ -44,7 +36,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     
-	<script src="../js/wow.js"></script>
+	<script src="../js/wow.min.js"></script>
 	<script src="../js/retina.min.js"></script>
     <script src="../js/holder.js"></script>
     <script src="../js/flowtype.js"></script>

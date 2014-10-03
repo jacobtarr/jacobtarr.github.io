@@ -1,0 +1,97 @@
+# -------------------------------
+# Site settings
+# -------------------------------
+title: Jake Tarr
+email: jtarr.rams@gmail.com
+description: ""
+baseurl: ""
+url: "http://yourdomain.com"
+
+# -------------------------------
+# Services section
+# -------------------------------
+
+frontend_services_brief: 'Frontend development is my bread and butter. I have experience in the latest web technologies and the skillset to make your website feel modern and responsive.'
+frontend_services:
+- { item: 'HTML5' }
+- { item: 'CSS3' }
+- { item: 'Javascript and jQuery' }
+- { item: 'Sass' }
+- { item: 'Jekyll websites' }
+
+backend_services_brief: 'Most people need more than simply a static website. Databases help make your website more dynamic. I&#39;m also experienced in backend development.'
+backend_services:
+- { item: 'PHP' }
+- { item: 'MySQL' }
+- { item: 'Wordpress' }
+- { item: 'Ruby and Rails' }
+
+uiux_services_brief: 'A great website isn&#39;t just made from thin air. The design process is where it all starts. I&#39;m experienced in all forms of the design process.'
+uiux_services:
+- { item: 'Wireframing' }
+- { item: 'Sketch/Photoshop Mockups' }
+- { item: 'Logo Design' }
+- { item: 'Icon Design/Illustrations' }
+
+# -------------------------------
+# Skills section
+# -------------------------------
+
+skills_column_one:
+- { name: 'HTML', length: '100' }
+- { name: 'CSS', length: '90' }
+- { name: 'JavaScript & jQuery', length: '70' }
+- { name: 'Communication', length: '80' }
+
+skills_column_two:
+- { name: 'Logo Design', length: '60' }
+- { name: 'PHP & MySQL', length: '60' }
+- { name: 'Ruby & Rails', length: '30' }
+- { name: 'Wireframing & UI Design', length: '60' }
+
+# -------------------------------
+# Footer
+# -------------------------------
+
+footer_about_brief: 'I&#39;m a freelance web designer with a focus in frontend technologies such as HTML, CSS, and JavaScript and responsive web design so that your website looks great on any device.'
+
+footer_sitemap_links:
+- { url_link: '../about', name: 'About' }
+- { url_link: '../work', name: 'Work' }
+- { url_link: '../blog', name: 'Blog' }
+- { url_link: '../contact', name: 'Contact' }
+
+footer_icons:
+- {
+	url_link: 'http://twitter.com/jacobtarr',
+	img_link: '../img/global/twitter-icon.svg'
+}
+- {
+	url_link: 'http://facebook.com/jtarr523',
+	img_link: '../img/global/facebook-icon.svg'
+}
+- {
+	url_link: 'http://dribbble.com/jacobtarr',
+	img_link: '../img/global/dribbble-icon.svg'
+}
+- {
+	url_link: 'http://linkedin.com/in/jacobtarr',
+	img_link: '../img/global/linkedin-icon.svg'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

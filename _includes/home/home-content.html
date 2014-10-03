@@ -13,14 +13,11 @@
 				<figure class="service-item-icon-container">
 					<img class="service-item-icon wow fadeIn" src="img/home/code-editor.png" alt="">
 				</figure>
-				<p>Frontend development is my bread and butter. I have experience in the latest web technologies and the skillset to make your website feel modern and responsive.
-				</p>
+				<p>{{ site.data.settings.frontend_services_brief }}</p>
 				<ul>
-					<li>HTML5</li>
-					<li>CSS3</li>
-					<li>Javascript and jQuery</li>
-					<li>Sass and Jade</li>
-					<li>Jekyll websites</li>
+					{% for frontend_service in site.data.settings.frontend_services %}
+					<li>{{ frontend_service.item }}
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="service-item col-sm-4">
@@ -28,13 +25,11 @@
 				<figure class="service-item-icon-container">
 					<img class="service-item-icon wow fadeIn" src="img/home/server-rack.png" alt="">
 				</figure>
-				<p>Most people need more than simply a static website. Databases help make your website more dynamic. I'm also experienced in backend development.
-				</p>
+				<p>{{ site.data.settings.backend_services_brief }}</p>
 				<ul>
-					<li>PHP</li>
-					<li>MySQL</li>
-					<li>Wordpress</li>
-					<li>Ruby and Rails</li>
+					{% for backend_service in site.data.settings.backend_services %}
+					<li>{{ backend_service.item }}</li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="service-item col-sm-4">
@@ -42,13 +37,11 @@
 				<figure class="service-item-icon-container">
 					<img class="service-item-icon wow fadeIn" src="img/home/ui-design.png" alt="">
 				</figure>
-				<p>A great website isn't just made from thin air. The design process is where it all starts. I'm experienced in all forms of the design process.
-				</p>
+				<p>{{ site.data.settings.uiux_services_brief }}</p>
 				<ul>
-					<li>Wireframing</li>
-					<li>Sketch/Photoshop Mockups</li>
-					<li>Logo Design</li>
-					<li>Icon Design/Illustrations</li>
+					{% for uiux_service in site.data.settings.uiux_services %}
+					<li>{{ uiux_service.item }}</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>
@@ -64,72 +57,28 @@
 		</div>
 		<div class="skills-container row">
 			<div class="skills-column col-xs-6">
+				{% for skill in site.data.settings.skills_column_one %}
 				<div class="skill">
-					<h6>HTML</h6>
+					<h6>{{ skill.name }}</h6>
 					<div class="skill-bar">
 						<div class="full-bar">
-							<div class="skill-percentage skill100Animate skill-100 wow"></div>
+							<div class="skill-percentage skill{{ skill.length }}Animate skill-{{ skill.length }} wow"></div>
 						</div>
 					</div>
 				</div>
-				<div class="skill">
-					<h6>CSS</h6>
-					<div class="skill-bar">
-						<div class="full-bar">
-							<div class="skill-percentage skill90Animate skill-90 wow"></div>
-						</div>
-					</div>
-				</div>
-				<div class="skill">
-					<h6>JavaScript & jQuery</h6>
-					<div class="skill-bar">
-						<div class="full-bar">
-							<div class="skill-percentage skill70Animate skill-70 wow"></div>
-						</div>
-					</div>
-				</div>
-				<div class="skill">
-					<h6>Communication</h6>
-					<div class="skill-bar">
-						<div class="full-bar">
-							<div class="skill-percentage skill80Animate skill-80 wow"></div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 			<div class="skills-column col-xs-6">
+				{% for skill in site.data.settings.skills_column_two %}
 				<div class="skill">
-					<h6>Logo Design</h6>
+					<h6>{{ skill.name }}</h6>
 					<div class="skill-bar">
 						<div class="full-bar">
-							<div class="skill-percentage skill60Animate skill-60 wow"></div>
+							<div class="skill-percentage skill{{ skill.length }}Animate skill-{{ skill.length }} wow"></div>
 						</div>
 					</div>
 				</div>
-				<div class="skill">
-					<h6>PHP & MySQL</h6>
-					<div class="skill-bar">
-						<div class="full-bar">
-							<div class="skill-percentage skill60Animate skill-60 wow"></div>
-						</div>
-					</div>
-				</div>
-				<div class="skill">
-					<h6>Ruby & Rails</h6>
-					<div class="skill-bar">
-						<div class="full-bar">
-							<div class="skill-percentage skill30Animate skill-30 wow"></div>
-						</div>
-					</div>
-				</div>
-				<div class="skill">
-					<h6>Wireframing & UI Design</h6>
-					<div class="skill-bar">
-						<div class="full-bar">
-							<div class="skill-percentage skill60Animate skill-60 wow"></div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>

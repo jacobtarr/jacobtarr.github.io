@@ -11,6 +11,7 @@
 }
 
 html {
+	height: 100%;
 	font-family: sans-serif;
 }
 
@@ -19,8 +20,8 @@ body {
 	color: #555;
 	font-size: 18px;
 	line-height: 1.4;
-	background-image: url('../img/global/halftone.png');
-	
+	background-color: $background-color;
+	height: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {

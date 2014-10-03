@@ -12,55 +12,21 @@ title: Work - Jake Tarr
 		</div>
 	</div>
 	<div class="project-container">
-		<div class="project-gallery">
-			<figure><img src="holder.js/100x100" alt=""></figure>
-			<figure><img src="holder.js/200x200" alt=""></figure>
-			<figure><img src="holder.js/300x100" alt=""></figure>
-		</div>
-		<article class="project-info">
-			<h2>Title of Project</h2>
-			<ul class="project-facts">
-				<li class="project-fact">
-					<div class="project-fact-title">
-						Status
-					</div>
-					<div class="project-fact-description">
-						Completed
-					</div>
-				</li>
-				<li class="project-fact">
-					<div class="project-fact-title">
-						Current Repository/URL
-					</div>
-					<div class="project-fact-description">
-						http://example.com
-					</div>
-				</li>
-				<li class="project-fact">
-					<div class="project-fact-title">
-						Technologies Used
-					</div>
-					<div class="project-fact-description">
-						HTML, CSS, JavaScript, PHP, MySQL
-					</div>
-				</li>
-				<li class="project-fact">
-					<div class="project-fact-title">
-						Description of Project
-					</div>
-					<div class="project-fact-description">
-						Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					</div>
-				</li>
-			</ul>
-		</article>
+		{% include work/project-gregmauz.html %}
+		{% include work/project-personal.html %}
+		{% include work/project-syllabus.html %}
 	</div>
 	<div class="more-projects-container">
 		<h2>Check out my other projects</h2>
 		<div class="more-projects-gallery">
-			<figure class="project-image">
-				<img src="holder.js/100x220" alt="img">
-			</figure>
+			{% for more_projects_gallery_image in site.data.projects.more_projects_gallery_images %}
+			<div class="more-projects-gallery-img-container">
+				<figure>
+					<img class="{{ more_projects_gallery_image.thumbnail_class }}" src="../img/projects/{{ more_projects_gallery_image.image_path }}" alt="{{ more_projects_gallery_image.alt_text }}">
+					<span></span>
+				</figure>
+			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>
