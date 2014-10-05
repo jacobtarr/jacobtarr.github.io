@@ -1,6 +1,6 @@
 /* FlowType JS config
 =============================== */
-$(function flowTypeConfig() {
+flowTypeConfig = function() {
 	$('.header-menu').flowtype({
 		minimum   : 320,
 		maximum   : 768,
@@ -40,7 +40,7 @@ $(function flowTypeConfig() {
 		minimum   : 320,
 		maximum   : 768,
 		minFont   : 24,
-		maxFont   : 36,
+		maxFont   : 32,
 		fontRatio : 20
 	});
 	$('.project-facts').flowtype({
@@ -50,6 +50,12 @@ $(function flowTypeConfig() {
 		maxFont   : 22,
 		fontRatio : 30
 	});
+}
+
+/* Initialize FlowType
+=============================== */
+$(function(){
+	flowTypeConfig();
 });
 
 /* Initialize Wow.js script
@@ -135,26 +141,45 @@ $(function loadProjectContent() {
 	var $thumbnailPersonal = $('.more-projects-gallery-img-container .thumbnail-personal');
 	var $thumbnailSyllabus = $('.more-projects-gallery-img-container .thumbnail-syllabus');
 
-	// Detach the non-default specific projects from DOM
-	$projectPersonal.detach();
-	$projectSyllabus.detach();
+	// Hide the non-default specific projects from DOM
+	$projectPersonal.hide();
+	$projectSyllabus.hide();
 
+	// Function for animating scroll
+	animateScroll = function(element) {
+		$('html, body').animate({
+			scrollTop: $(element).offset().top
+		});
+	}
+	
 	// When user clicks Greg Mauz thumbnail image
 	$thumbnailGregMauz.on("click", function(){
-		$projectContainer.empty();
-		$projectContainer.append($projectGregMauz);
+		$projectContainer.children().hide();
+		$projectGregMauz.fadeIn(1100).show();
+		$('.project-gallery').unslick();
+		slickSliderConfig();
+		flowTypeConfig();
+		animateScroll('#project-gregmauz');
 	});
 
 	// When user clicks Personal thumbnail image
 	$thumbnailPersonal.on("click", function(){
-		$projectContainer.empty();
-		$projectContainer.append($projectPersonal);
+		$projectContainer.children().hide();
+		$projectPersonal.fadeIn(1100).show();
+		$('.project-gallery').unslick();
+		slickSliderConfig();
+		flowTypeConfig();
+		animateScroll('#project-personal');
 	});
 
 	// When user clicks Syllabus thumbnail image
 	$thumbnailSyllabus.on("click", function(){
-		$projectContainer.empty();
-		$projectContainer.append($projectSyllabus);
+		$projectContainer.children().hide();
+		$projectSyllabus.fadeIn(1100).show();
+		$('.project-gallery').unslick();
+		slickSliderConfig();
+		flowTypeConfig();
+		animateScroll('#project-syllabus');
 	});
 
 });
