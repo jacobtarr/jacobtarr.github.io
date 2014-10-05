@@ -1,0 +1,2 @@
+## Personal Website
+This repository hosts my personal portfolio located at [jacobtarr.github.io](http://jacobtarr.github.io). It was built using the [Jekyll](http://jekyllrb.com) CMS and static page builder.
