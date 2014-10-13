@@ -50,6 +50,20 @@ flowTypeConfig = function() {
 		maxFont   : 22,
 		fontRatio : 30
 	});
+	$('.featured-post h2, .blog-post h2').flowtype({
+		minimum   : 320,
+		maximum   : 768,
+		minFont   : 24,
+		maxFont   : 36,
+		fontRatio : 20
+	});
+	$('.featured-post p, .blog-post p').flowtype({
+		minimum   : 320,
+		maximum   : 768,
+		minFont   : 16,
+		maxFont   : 20,
+		fontRatio : 30
+	});
 }
 
 /* Initialize FlowType

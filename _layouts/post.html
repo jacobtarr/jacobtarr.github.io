@@ -1,3 +1,68 @@
 ---
 layout: default
 ---
+
+<section class="blog-post-section">
+	<div class="ribbon-container">
+		<div class="ribbon">
+			<div class="ribbon-content">
+				<h6>Blog</h6>
+			</div>
+		</div>
+	</div>
+	<article class="blog-post">
+		<figure>
+			<img src="holder.js/900x380" alt="">
+		</figure>
+		<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
+		<div class="post-byline">
+			<ul>
+				<li><i class="fa fa-user"></i>
+					{% if page.author %}
+						{{ page.author }}
+					{% else %}
+						{{ site.data.settings.author }}
+					{% endif %}
+				</li>
+				<li><i class="fa fa-calendar-o"></i>{{ page.date | date: '%b %d, %Y' }}</li>
+				<li><i class="fa fa-comment"></i>3 Comments</li>
+			</ul>
+		</div>
+		{{ content }}
+		<div class="post-social-media-byline">
+			<ul>
+				<li>Share this article:</li>
+				<li><a href="" class="social-btn facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
+				<li><a href="" class="social-btn twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
+			</ul>
+		</div>
+		<div id="comment-section">
+			<h2>Comments</h2>
+			{% if page.comments %}
+				<div id="disqus_thread"></div>
+			    <script>
+			        var disqus_shortname = 'jtarr';
+
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+	    		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			{% endif %}
+		</div>
+	</article>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+

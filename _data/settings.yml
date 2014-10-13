@@ -57,27 +57,27 @@ skills_column_two:
 footer_about_brief: 'I&#39;m a freelance web designer with a focus in frontend technologies such as HTML, CSS, and JavaScript and responsive web design so that your website looks great on any device.'
 
 footer_sitemap_links:
-- { url_link: '../about', name: 'About' }
-- { url_link: '../work', name: 'Work' }
-- { url_link: '../blog', name: 'Blog' }
-- { url_link: '../contact', name: 'Contact' }
+- { url_link: '/about', name: 'About' }
+- { url_link: '/work', name: 'Work' }
+- { url_link: '/blog', name: 'Blog' }
+- { url_link: '/contact', name: 'Contact' }
 
 footer_icons:
 - {
 	url_link: 'http://twitter.com/jacobtarr',
-	img_link: '../img/global/twitter-icon.svg'
+	img_link: '/img/global/twitter-icon.svg'
 }
 - {
 	url_link: 'http://facebook.com/jtarr523',
-	img_link: '../img/global/facebook-icon.svg'
+	img_link: '/img/global/facebook-icon.svg'
 }
 - {
 	url_link: 'http://dribbble.com/jacobtarr',
-	img_link: '../img/global/dribbble-icon.svg'
+	img_link: '/img/global/dribbble-icon.svg'
 }
 - {
 	url_link: 'http://linkedin.com/in/jacobtarr',
-	img_link: '../img/global/linkedin-icon.svg'
+	img_link: '/img/global/linkedin-icon.svg'
 }
 
 

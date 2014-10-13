@@ -3,7 +3,7 @@ layout: default
 title: Blog - Jake Tarr
 ---
 
-<section class="blog-feed">
+<section class="blog-feed-section">
 	<div class="ribbon-container">
 		<div class="ribbon">
 			<div class="ribbon-content">
@@ -30,7 +30,7 @@ title: Blog - Jake Tarr
 							{{ site.data.settings.author }}
 						{% endif %}
 					</li>
-					<li><i class="fa fa-calendar-o"></i>{{ post.date }}</li>
+					<li><i class="fa fa-calendar-o"></i>{{ post.date | date: '%b %d, %Y' }}</li>
 					<li><i class="fa fa-comment"></i>3 Comments</li>
 				</ul>
 			</div>
@@ -41,7 +41,7 @@ title: Blog - Jake Tarr
 	<div class="blog-feed-latest-section">
 		<h5>Latest Posts</h5>
 		<div class="latest-posts-row">
-			{% for post in site.posts offset:1 limit:3 %}
+			{% for post in site.posts offset:1 %}
 			<article class="latest-post">
 				<figure>
 					<img src="holder.js/260x200" alt="">
@@ -57,7 +57,7 @@ title: Blog - Jake Tarr
 								{{ site.data.settings.author }}
 							{% endif %}
 						</li>
-						<li><i class="fa fa-calendar-o"></i>{{ post.date }}</li>
+						<li><i class="fa fa-calendar-o"></i>{{ post.date | date: '%b %d, %Y' }}</li>
 						<li><i class="fa fa-comment"></i>3 Comments</li>
 					</ul>
 				</div>
@@ -65,7 +65,7 @@ title: Blog - Jake Tarr
 			{% endfor %}
 		</div>
 	</div>
-</section>
+</section> 
 
 
 
