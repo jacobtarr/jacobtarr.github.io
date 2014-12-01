@@ -1,24 +1,28 @@
-/* About Section
-=============================== */
+// -----------------------------
+// About
+// -----------------------------
 
 .about-section {
 	margin-top: 40px;
-	.lead-in {
-		font-family: "Adelle", serif;
-		font-size: 22px;
-		margin-top: 40px;
-	}
 }
 
-/* Intro Section */
-.about-section-intro {
+.about-section__content {
 	@include clearfix;
 	img {
 		float: right;
 		margin-left: 15px;
 		@media (max-width: 480px) {
-			max-height: 120px;
-			max-width: 120px;
+			max-height: 100px;
+			max-width: 100px;
 		}
+	}
+}
+
+.about-section__content--lead-in {
+	font-family: "Adelle", serif;
+	font-size: 22px;
+	margin-top: 40px;
+	@media (max-width: 480px) {
+		font-size: 18px;
 	}
 }

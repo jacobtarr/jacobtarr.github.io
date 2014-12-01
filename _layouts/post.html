@@ -2,17 +2,17 @@
 layout: default
 ---
 
-<section class="blog-post-section">
+<section class="blog-post">
 	<div class="ribbon-container">
 		<div class="ribbon">
-			<div class="ribbon-content">
+			<div class="ribbon__content">
 				<h6>Blog</h6>
 			</div>
 		</div>
 	</div>
-	<article class="blog-post">
-		<figure>
-			<img src="holder.js/900x380" alt="">
+	<article class="blog-post__article">
+		<figure class="post--featured-image">
+			<img src="{{ page.featured_image_path }}" alt="">
 		</figure>
 		<h2><a href="{{ post.url }}">{{ page.title }}</a></h2>
 		<div class="post-byline">
@@ -25,15 +25,22 @@ layout: default
 					{% endif %}
 				</li>
 				<li><i class="fa fa-calendar-o"></i>{{ page.date | date: '%b %d, %Y' }}</li>
-				<li><i class="fa fa-comment"></i>3 Comments</li>
+				<li><i class="fa fa-comment"></i><a href="{{ post.url }}#disqus_thread"></a></li>
 			</ul>
 		</div>
 		{{ content }}
-		<div class="post-social-media-byline">
+		<div class="post-byline__social">
 			<ul>
 				<li>Share this article:</li>
-				<li><a href="" class="social-btn facebook"><i class="fa fa-facebook"></i>Facebook</a></li>
-				<li><a href="" class="social-btn twitter"><i class="fa fa-twitter"></i>Twitter</a></li>
+				<li class="post-byline__social--button-container">
+					<a href="http://www.facebook.com/share.php?u={{ site.data.settings.baseurl }}{{ page.url }}&title={{ page.title }}" class="btn btn__facebook"><i class="fa fa-facebook"></i>Facebook</a>
+				</li>
+				<li class="post-byline__social--button-container">
+					<a href="http://twitter.com/home?status={{ page.title }}+{{ site.data.settings.baseurl }}{{ page.url }}" class="btn btn__twitter"><i class="fa fa-twitter"></i>Twitter</a>
+				</li>
+				<li class="post-byline__social--button-container">
+					<a href="http://www.reddit.com/submit?url={{ site.data.settings.baseurl }}{{ page.url }}&title={{ page.title }}" class="btn btn__reddit"><i class="fa fa-reddit"></i>Reddit</a>
+				</li>
 			</ul>
 		</div>
 		<div id="comment-section">

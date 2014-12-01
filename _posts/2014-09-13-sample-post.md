@@ -1,8 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "Sample Deliciousness"
+title:  Sample Deliciousness
 date:   2014-09-13
+featured_image_path: holder.js/900x380
 categories: blog
 ---
  

@@ -1,8 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "To Infinity and Beyond"
+title:  To Infinity and Beyond
 date:   2014-10-05
+featured_image_path: holder.js/900x380
 categories: blog
 ---
 

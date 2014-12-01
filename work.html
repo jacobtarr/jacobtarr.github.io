@@ -6,23 +6,46 @@ title: Work - Jake Tarr
 <section class="work-section">
 	<div class="ribbon-container">
 		<div class="ribbon">
-			<div class="ribbon-content">
+			<div class="ribbon__content">
 				<h6>Work</h6>
 			</div>
 		</div>
 	</div>
 	<div class="project-container">
-		{% include work/project-gregmauz.html %}
-		{% include work/project-personal.html %}
-		{% include work/project-syllabus.html %}
+		{% for project in site.data.projects.projects %}
+			<div id="project-{{ project.slug }}">
+				<div class="project-gallery">
+					{% for image in project.images %}
+						<figure>
+							<img src="../img/projects/{{ image.image }}.png" alt="{{ image.alt_text }}">
+						</figure>
+					{% endfor %}
+				</div>
+				{% for project_title in project.project_title %}
+					<h2>{{ project.project_title }}</h2>
+				{% endfor %}
+				<ul class="project-info">
+					{% for info_content in project.info_contents %}
+						<li class="project-info__fact">
+							<div class="project-info__fact--title">
+								{{ info_content.title }}
+							</div>
+							<div class="project-info__fact--description">
+								{{ info_content.desc }}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
 	</div>
-	<div class="more-projects-container">
+	<div class="more-projects-section">
 		<h2>Check out my other projects</h2>
 		<div class="more-projects-gallery">
 			{% for more_projects_gallery_image in site.data.projects.more_projects_gallery_images %}
-			<div class="more-projects-gallery-img-container">
+			<div class="more-projects-gallery__thumbnail">
 				<figure>
-					<img class="{{ more_projects_gallery_image.thumbnail_class }}" src="../img/projects/{{ more_projects_gallery_image.image_path }}" alt="{{ more_projects_gallery_image.alt_text }}">
+					<img class="more-projects-gallery__thumbnail--{{ more_projects_gallery_image.project_name }}" src="../img/projects/{{ more_projects_gallery_image.project_name }}/thumbnail-preview-{{ more_projects_gallery_image.project_name }}.png" alt="thumbnail-preview-{{ more_projects_gallery_image.project_name }}">
 					<span></span>
 				</figure>
 			</div>

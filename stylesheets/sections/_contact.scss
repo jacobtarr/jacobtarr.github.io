@@ -1,5 +1,6 @@
-/* Contact Section
-=============================== */
+// -----------------------------
+// Contact
+// -----------------------------
 
 .contact-section {
 	margin-top: 40px;
@@ -9,11 +10,11 @@
 	}
 }
 
-.contact-form-container {
+.contact-section__content {
 	margin-top: 50px;
 }
 
-.contact-form {
+.contact-section__content--form {
 	max-width: 50%;
 	margin: 40px auto 0;
 	@include clearfix;
@@ -34,59 +35,10 @@
 	}
 }
 
-.contact-form-group {
-	margin-top: 30px;
-	&:first-child {
-		margin-top: 0;
-	}
+.form-group {
+	margin-bottom: 30px;
 }
 
-/* Forms
-=============================== */
-
-label {
-	display: block;
-}
-
-input, textarea {
-	background: #ddd;
-	border-radius: 5px;
-	border: 0;
-	padding: 8px 16px;
-
-	&:focus {
-		background: $light-blue;
-		color: #fff;
-		@include transition(.5s ease);
-	}
-}
-
-textarea {
-	resize: vertical;
-}
-
-
-/* Buttons
-=============================== */
-
-.btn {
-	border-radius: 5px;
-	padding: 8px 16px;
-	color: #fff;
-	border: 0;
-	white-space: nowrap;
-	vertical-align: middle;
-	&:focus {
-		position: relative;
-		top: 4px;
-		box-shadow: none;
-	}
-}
-
-.btn-default {
-	background: $light-blue;
-	box-shadow: 0px 4px 0 $medium-blue;
-}
 
 
 

@@ -1,8 +1,11 @@
+// -----------------------------
+// Sections Directory
+// -----------------------------
+
 // Sections
-@import 'base';
 @import 'header';
-@import 'home-callout';
-@import 'home-content';
+@import 'home_callout';
+@import 'home_content';
 @import 'footer';
 
 // Pages
@@ -11,5 +14,5 @@
 @import 'work';
 
 // Blog
-@import 'blog-feed';
-@import 'blog-post';
+@import 'blog_feed';
+@import 'blog_post';

@@ -1,8 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "Nothing to see here"
+title:  Nothing to see here
 date:   2014-09-09
+featured_image_path: holder.js/900x380
 categories: blog
 ---
 

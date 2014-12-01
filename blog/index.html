@@ -3,21 +3,21 @@ layout: default
 title: Blog - Jake Tarr
 ---
 
-<section class="blog-feed-section">
+<section class="blog-feed">
 	<div class="ribbon-container">
 		<div class="ribbon">
-			<div class="ribbon-content">
+			<div class="ribbon__content">
 				<h6>Blog</h6>
 			</div>
 		</div>
 	</div>
 	<!-- Featured post (latest post) -->
-	<div class="blog-feed-featured-section">
+	<div class="featured-section">
 		<h5>Featured Post</h5>
 		{% for post in site.posts limit:1 %}
-		<article class="featured-post">
-			<figure>
-				<img src="holder.js/900x380" alt="">
+		<article class="featured-section__post">
+			<figure class="post--featured-image">
+				<a href="{{ post.url }}"><img src="{{ post.featured_image_path }}" alt=""></a>
 			</figure>
 			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 			<p>{{ post.excerpt | strip_html }}</p>
@@ -31,41 +31,51 @@ title: Blog - Jake Tarr
 						{% endif %}
 					</li>
 					<li><i class="fa fa-calendar-o"></i>{{ post.date | date: '%b %d, %Y' }}</li>
-					<li><i class="fa fa-comment"></i>3 Comments</li>
+					<li><i class="fa fa-comment"></i><a href="{{ post.url }}#disqus_thread"></a></li>
 				</ul>
 			</div>
 		</article>
 		{% endfor %}
 	</div>
 	<!-- All the other posts added before latest post -->
-	<div class="blog-feed-latest-section">
+	<div class="latest-section">
 		<h5>Latest Posts</h5>
-		<div class="latest-posts-row">
-			{% for post in site.posts offset:1 %}
-			<article class="latest-post">
-				<figure>
-					<img src="holder.js/260x200" alt="">
-				</figure>
-				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-				<p>{{ post.excerpt | strip_html }}</p>
-				<div class="post-byline">
-					<ul>
-						<li><i class="fa fa-user"></i>
-							{% if post.author %}
-								{{ post.author }}
-							{% else %}
-								{{ site.data.settings.author }}
-							{% endif %}
-						</li>
-						<li><i class="fa fa-calendar-o"></i>{{ post.date | date: '%b %d, %Y' }}</li>
-						<li><i class="fa fa-comment"></i>3 Comments</li>
-					</ul>
-				</div>
-			</article>
+		<div class="latest-section__row">
+			{% for post in site.posts offset:1 limit:3 %}
+			{% capture post_row %}
+				<article class="latest-section__row--post">
+					<figure class="post--featured-image">
+						<a href="{{ post.url }}"><img src="{{ post.featured_image_path }}" alt=""></a>
+					</figure>
+					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					<p>{{ post.excerpt | strip_html }}</p>
+					<div class="post-byline">
+						<ul>
+							<li><i class="fa fa-user"></i>
+								{% if post.author %}
+									{{ post.author }}
+								{% else %}
+									{{ site.data.settings.author }}
+								{% endif %}
+							</li>
+							<li><i class="fa fa-calendar-o"></i>{{ post.date | date: '%b %d, %Y' }}</li>
+							<li><i class="fa fa-comment"></i><a href="{{ post.url }}#disqus_thread"></a></li>
+						</ul>
+					</div>
+				</article>
+			{% endcapture %}
+			{{ post_row }}
+			{% endfor %}
+		</div>
+		<div class="latest-section__row">
+			{% for post in site.posts offset:4 limit:3 %}
+				{{ post_row }}
 			{% endfor %}
 		</div>
 	</div>
 </section> 
+
+
 
 
 

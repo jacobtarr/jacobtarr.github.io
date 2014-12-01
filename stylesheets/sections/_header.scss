@@ -1,15 +1,16 @@
-/* Header
-=============================== */
+// -----------------------------
+// Header
+// -----------------------------
 
-header {
+.site-header {
 	max-width: 960px;
 	margin: 0 auto;
 	margin-top: 30px;
 }
 
-.logo-container {
+.site-header__logo {
 	text-align: center;
-	.logo {
+	img {
 		max-width: 298px;
 		width: 100%;
 		&:hover {
@@ -22,9 +23,8 @@ header {
 	}
 }
 
-.header-menu {
-	@extend .multi-border;
-	font-size: 18px;
+.site-header__menu {
+	@include multi-border(18px);
 	margin-top: 50px;
 	padding: 20px 0;
 	ul {
@@ -60,23 +60,28 @@ header {
 				width: 100%;
 				height: 100%;
 				border-radius: 5px;
-				background-color: $light-blue;
+				background-color: $site-color__light-blue;
 				content: '';
 				opacity: 0;
 				@include transition (transform 0.3s, opacity 0.3s);
 				@include transform (scale(0));
 			}
 		}
-	}
-}
-
-// Media Queries
-
-@media (max-width: 560px) {
-	.header-menu {
-		li {
-			padding-right: 20px;
+		@media (max-width: 600px) {
+			padding-right: 40px;
+			font-size: 16px;
+		}
+		@media (max-width: 480px) {
+			padding-right: 25px;
+			font-size: 14px;
 		}
 	}
+	@media (max-width: 480px) {
+		padding: 15px 0;
+	}
 }
+
+
+
+
 

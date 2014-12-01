@@ -1,12 +1,13 @@
-/* Footer
-=============================== */
+// -----------------------------
+// Footer
+// -----------------------------
 
-@include sticky-footer(130px, ".home-content", ".footer-push", "footer");
+@include sticky-footer(130px, ".home-content", ".site-footer__push", ".site-footer");
 
-footer {
+.site-footer {
 	margin-top: 200px;
 	color: white;
-	background: $medium-blue;
+	background: $site-color__medium-blue;
 	margin-right: auto;
 	margin-left: auto;
 	padding-left: 15px;
@@ -16,34 +17,35 @@ footer {
 }
 
 
-/* Top Footer
-=============================== */
-.top-footer-container {
+// -----------------------------
+// Footer -- Top
+// -----------------------------
+
+.site-footer__top-container {
 	max-width: 960px;
 	margin: 0 auto;
 }
 
-.top-footer-content {
+.site-footer__top-container--content {
 	text-align: center;
 	padding-top: 20px;
-	color: $footer-text;
+	color: $site-color__footer--text;
 	h5 {
-		font-size: 20px;
 		text-transform: uppercase;
 		text-align: center;
-		color: $footer-title;
+		color: $site-color__footer--title;
 		font-family: "Proxima Nova", "Proxima-Nova", sans-serif;
 		padding: 10px 0;
 		font-weight: 600;
-		@extend .multi-border;
-		border-top: 1px solid $footer-title;
-		border-bottom: 1px solid $footer-title;
+		@include multi-border(20px);
+		border-top: 1px solid $site-color__footer--title;
+		border-bottom: 1px solid $site-color__footer--title;
 		&::before {
-			border-top: 3px solid $footer-title;
+			border-top: 3px solid $site-color__footer--title;
 			z-index: 2;
 		}
 		&::after {
-			border-bottom: 3px solid $footer-title;
+			border-bottom: 3px solid $site-color__footer--title;
 			z-index: 2;
 		}
 		@media (max-width: 990px) {
@@ -59,42 +61,43 @@ footer {
 		list-style: none;
 	}
 	a {
-		color: $footer-text;
+		color: $site-color__footer--text;
 		&:hover {
 			@include transition(0.2s);
-			color: $heavy-blue;
+			color: $site-color__heavy-blue;
+		}
+	}
+	.icon {
+		margin-right: 7px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			opacity: 0.8;
+			@include transition(0.2s ease-in);
+		}
+		img {
+			max-width: 55px;
+			@media (max-width: 998px) {
+				max-width: 45px;
+			}
 		}
 	}
 }
 
-.top-footer-icon {
-	margin-right: 7px;
-	&:last-child {
-		margin-right: 0;
-	}
-	&:hover {
-		opacity: 0.8;
-		@include transition(0.2s ease-in);
-	}
-	img {
-		max-width: 55px;
-		@media (max-width: 998px) {
-			max-width: 45px;
-		}
-	}
-}
 
+// -----------------------------
+// Footer -- Bottom
+// -----------------------------
 
-/* Bottom Footer
-=============================== */
-.bottom-footer-container {
+.site-footer__bottom-container {
 	text-align: center;
-	background: $heavy-blue;
+	background: $site-color__heavy-blue;
 	margin-left: -15px;
 	margin-right: -15px;
 }
 
-.bottom-footer-content {
+.site-footer__bottom-container--content {
 	max-width: 960px;
 	margin: 0 auto;
 	margin-top: 15px;
@@ -103,10 +106,5 @@ footer {
 }
 
 
-.social-icons {
-	
-}
 
-.footer-menu {
 
-}

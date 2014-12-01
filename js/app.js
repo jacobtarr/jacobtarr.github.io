@@ -1,13 +1,6 @@
 /* FlowType JS config
 =============================== */
 flowTypeConfig = function() {
-	$('.header-menu').flowtype({
-		minimum   : 320,
-		maximum   : 768,
-		minFont   : 14,
-		maxFont   : 18,
-		fontRatio : 30
-	});
 	$('.home-callout h1').flowtype({
 		minimum   : 320,
 		maximum   : 1020,
@@ -22,42 +15,21 @@ flowTypeConfig = function() {
 		maxFont   : 20,
 		fontRatio : 30
 	});
-	$('.skills-container h6').flowtype({
+	$('.skills-section__content--skill-container h6').flowtype({
 		minimum   : 320,
 		maximum   : 768,
 		minFont   : 16,
 		maxFont   : 20,
 		fontRatio : 20
 	});
-	$('.contact-form-container p').flowtype({
+	$('.contact-section p').flowtype({
 		minimum   : 320,
 		maximum   : 768,
 		minFont   : 16,
 		maxFont   : 22,
 		fontRatio : 30
 	});
-	$('.work-section h2').flowtype({
-		minimum   : 320,
-		maximum   : 768,
-		minFont   : 24,
-		maxFont   : 32,
-		fontRatio : 20
-	});
-	$('.project-facts').flowtype({
-		minimum   : 320,
-		maximum   : 768,
-		minFont   : 16,
-		maxFont   : 22,
-		fontRatio : 30
-	});
-	$('.featured-post h2, .blog-post h2').flowtype({
-		minimum   : 320,
-		maximum   : 768,
-		minFont   : 24,
-		maxFont   : 36,
-		fontRatio : 20
-	});
-	$('.featured-post p, .blog-post p').flowtype({
+	$('.project-info').flowtype({
 		minimum   : 320,
 		maximum   : 768,
 		minFont   : 16,
@@ -81,8 +53,8 @@ new WOW().init();
 =============================== */
 slickSliderConfig = function() {
 
-	var projectGalleryArrowPrev = '<a><img class="project-gallery-arrow-prev" src="../img/work/arrow-left-btn.svg"></a>'
-	var projectGalleryArrowNext = '<a><img class="project-gallery-arrow-next" src="../img/work/arrow-right-btn.svg"></a>'
+	var projectGalleryArrowPrev = '<a><img class="project-gallery__arrow--prev" src="../img/work/arrow-left-btn.svg"></a>'
+	var projectGalleryArrowNext = '<a><img class="project-gallery__arrow--next" src="../img/work/arrow-right-btn.svg"></a>'
 
 	$('.project-gallery').slick({
 		speed: 300,
@@ -96,7 +68,7 @@ slickSliderConfig = function() {
 
 	$('.more-projects-gallery').slick({
 		speed: 300,
-		slide: '.more-projects-gallery-img-container',
+		slide: '.more-projects-gallery__thumbnail',
 		infinite: true,
 		slidesToShow: 4,
 		slidesToScroll: 4,
@@ -142,8 +114,8 @@ $(function(){
 
 $(function loadProjectContent() {
 	var $projectContainer = $('.project-container');
-	var $moreProjectsGalleryImageContainer = $('.more-projects-gallery-img-container');
-	var $moreProjectsGalleryImage = $('.more-projects-gallery-img-container img');
+	var $moreProjectsGalleryImageContainer = $('.more-projects-gallery__thumbnail');
+	var $moreProjectsGalleryImage = $('.more-projects-gallery__thumbnail img');
 
 	// Select specific projects in project-container
 	var $projectGregMauz = $('#project-gregmauz');
@@ -151,9 +123,9 @@ $(function loadProjectContent() {
 	var $projectSyllabus = $('#project-syllabus');
 
 	// Select project thumbnails in more-projects-gallery
-	var $thumbnailGregMauz = $('.more-projects-gallery-img-container .thumbnail-gregmauz');
-	var $thumbnailPersonal = $('.more-projects-gallery-img-container .thumbnail-personal');
-	var $thumbnailSyllabus = $('.more-projects-gallery-img-container .thumbnail-syllabus');
+	var $thumbnailGregMauz = $('.more-projects-gallery__thumbnail--gregmauz');
+	var $thumbnailPersonal = $('.more-projects-gallery__thumbnail--personal');
+	var $thumbnailSyllabus = $('.more-projects-gallery__thumbnail--syllabus');
 
 	// Hide the non-default specific projects from DOM
 	$projectPersonal.hide();
