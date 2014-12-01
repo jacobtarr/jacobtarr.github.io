@@ -1,0 +1,24 @@
+// -----------------------------
+// Forms
+// -----------------------------
+
+label {
+	display: block;
+}
+
+input, textarea {
+	background: #ddd;
+	border-radius: 5px;
+	border: 0;
+	padding: 8px 16px;
+
+	&:focus {
+		background: $site-color__light-blue;
+		color: #fff;
+		@include transition(.5s ease);
+	}
+}
+
+textarea {
+	resize: vertical;
+}

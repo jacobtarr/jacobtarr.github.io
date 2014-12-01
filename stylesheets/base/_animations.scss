@@ -1,0 +1,106 @@
+// -----------------------------
+// Animations -- Skills
+// -----------------------------
+
+// Animate to 10% of full skill bar
+@include keyframes (skill__animation--10percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 10%; }
+}
+
+// Animate to 20% of full skill bar
+@include keyframes (skill__animation--20percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 20%; }
+}
+
+// Animate to 30% of full skill bar
+@include keyframes (skill__animation--30percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 30%; }
+}
+
+// Animate to 40% of full skill bar
+@include keyframes (skill__animation--40percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 40%; }
+}
+
+// Animate to 50% of full skill bar
+@include keyframes (skill__animation--50percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 50%; }
+}
+
+// Animate to 60% of full skill bar
+@include keyframes (skill__animation--60percent) {
+	from  	{ width: 0%; }
+	to 		{ width: 60%; }
+}
+
+// Animate to 70% of full skill bar
+@include keyframes (skill__animation--70percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 70%; }
+}
+
+// Animate to 80% of full skill bar
+@include keyframes (skill__animation--80percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 80%; }
+}
+
+// Animate to 90% of full skill bar
+@include keyframes (skill__animation--90percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 90%; }
+}
+
+// Animate to 100% of full skill bar
+@include keyframes (skill__animation--100percent) {
+	from   	{ width: 0%; }
+	to 		{ width: 100%; }
+}
+
+// Create animation class for specific animation state for skill bar
+.skill__animation--10percent { @include animation(skill__animation--10percent 3s linear); }
+.skill__animation--20percent { @include animation(skill__animation--20percent 3s linear); }
+.skill__animation--30percent { @include animation(skill__animation--30percent 3s linear); }
+.skill__animation--40percent { @include animation(skill__animation--40percent 3s linear); }
+.skill__animation--50percent { @include animation(skill__animation--50percent 3s linear); }
+.skill__animation--60percent { @include animation(skill__animation--60percent 3s linear); }
+.skill__animation--70percent { @include animation(skill__animation--70percent 3s linear); }
+.skill__animation--80percent { @include animation(skill__animation--80percent 3s linear); }
+.skill__animation--90percent { @include animation(skill__animation--90percent 3s linear); }
+.skill__animation--100percent { @include animation(skill__animation--100percent 3s linear); }
+
+
+// -----------------------------
+// Animations -- Ribbons
+// -----------------------------
+
+// Animate width of ribbon
+@include keyframes (ribbon--animation) {
+	from   	{ max-width: 150px; }
+	to 		{ max-width: 890px; }
+}
+
+@include keyframes (ribbon__text--animation) {
+	from   	{ opacity: 0; }
+	to 		{ opacity: 1; }
+}
+
+// Create animation class for ribbon
+.ribbon--animation { @include animation(ribbon--animation 2s ease-in); }
+.ribbon__text--animation { @include animation(ribbon__text--animation 2s ease-in); }
+
+
+
+
+
+
+
+
+
+
+

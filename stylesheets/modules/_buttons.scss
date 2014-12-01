@@ -1,0 +1,48 @@
+// -----------------------------
+// Buttons
+// -----------------------------
+
+.btn {
+	border-radius: 5px;
+	padding: 8px 16px;
+	color: #fff !important;
+	border: 0;
+	white-space: nowrap;
+	vertical-align: middle;
+	&:hover {
+		opacity: 0.8;
+	}
+	// if used as button tag class
+	&:focus {
+		position: relative;
+		top: 4px;
+		box-shadow: none;
+	}
+}
+
+.btn__default {
+	background: $site-color__light-blue;
+	box-shadow: 0px 4px 0 $site-color__medium-blue;
+}
+
+.btn__facebook {
+	background: $site-color__blog-post--facebook;
+	box-shadow: 0px 4px 0 darken($site-color__blog-post--facebook, 10%);
+}
+
+.btn__twitter {
+	background: $site-color__blog-post--twitter;
+	box-shadow: 0px 4px 0 darken($site-color__blog-post--twitter, 10%);
+}
+
+.btn__reddit {
+	background: $site-color__blog-post--reddit;
+	box-shadow: 0px 4px 0 darken($site-color__blog-post--reddit, 10%);
+}
+
+
+
+
+
+
+

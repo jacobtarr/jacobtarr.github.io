@@ -1,0 +1,87 @@
+// -----------------------------
+// Components
+// -----------------------------
+
+// Ribbon
+.ribbon-container {
+	margin-bottom: 30px;
+	@media (max-width: 980px) {
+		padding: 0 50px;
+	}
+}
+
+.ribbon {
+	position: relative;
+	max-width: 890px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	background: $site-color__light-blue;
+	height: 39px;
+	border-radius: 5px;
+	.ribbon__content:before, .ribbon__content:after {
+		content: '';
+		border-color: $site-color__heavy-blue transparent transparent transparent;
+		position: absolute;
+		display: block;
+		border-style: solid;
+		bottom: -19px;
+	}
+	.ribbon__content:before {
+		left: 2px;
+		border-width: 19px 0 0 19px;
+		border-bottom-right-radius: 5px;
+	}
+	.ribbon__content:after {
+		right: 2px;
+		border-width: 19px 19px 0 0;
+		border-bottom-left-radius: 5px;
+	}
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		display: block;
+		bottom: -18px;
+		border: 16px solid $site-color__medium-blue;
+		z-index: -1;
+		max-width: 10px;
+		width: 100%;
+	}
+	&:before {
+		left: -35px;
+		border-right-width: 20px;
+		border-left-color: transparent;
+		border-bottom-right-radius: 5px;
+		padding-left: 20px;
+	}
+	&:after {
+		right: -35px;
+		border-left-width: 20px;
+		border-right-color: transparent;
+		border-bottom-left-radius: 5px;
+		padding-right: 20px;
+	}
+	h6 {
+		font-size: 22px;
+		color: #fff;
+		margin: 0px;
+		padding: 5px 0;
+		font-family: "Proxima Nova", "Proxima-Nova", sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		@media (max-width: 480px) {
+			font-size: 18px;
+			line-height: 1.6;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

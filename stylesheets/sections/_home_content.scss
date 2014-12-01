@@ -1,0 +1,124 @@
+// -----------------------------
+// Homepage -- Content
+// -----------------------------
+
+.home-content {
+	margin-top: 50px;
+}
+
+// -----------------------------
+// Homepage -- Services
+// -----------------------------
+
+.services-section__items-container {
+	text-align: center;
+}
+
+.services-section__items-container--item {
+	h5 {
+		margin-bottom: 30px;
+		@include multi-border(20px);
+		@media (max-width: 990px) {
+			font-size: 18px;
+		}
+		@media (min-width: 768px) and (max-width: 782px) {
+			min-height: 72px;
+		}
+	}
+	ul {
+		padding: 0;
+		display: inline-block;
+	}
+	figure {
+		min-height: 250px;
+		@media (max-width: 940px) {
+			min-height: 230px;
+		}
+		@media (max-width: 768px) {
+			min-height: initial;
+		}
+	}
+	img {
+		max-width: 300px;
+		width: 100%;
+		@media (min-width: 480px) and (max-width: 768px) {
+			max-width: 250px;
+		}
+		@media (max-width: 480px) {
+			max-width: 200px;
+		}
+	}
+}
+
+
+// -----------------------------
+// Homepage -- Skills
+// -----------------------------
+
+.skills-section {
+	margin-top: 30px;
+}
+
+.skills-section__content {
+	margin-top: 50px;
+	h6 {
+		font-family: "Proxima-Nova", "Proxima Nova", sans-serif;
+		text-align: center;
+		font-weight: 400;
+		margin: 0 0 5px 0;
+	}
+}
+
+.skills-section__content--skill-container {
+	margin-top: 30px;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.skill {
+	width: 100%;
+}
+
+.skill__bar {
+	overflow: hidden;
+	height: 16px;
+	background-color: #f7f7f7;
+	@include linear-gradient(top, #ddd, #ddd);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee', endColorstr='#eee', GradientType=0);
+	border-radius: 10px;
+	@media (max-width: 560px) {
+		height: 12px;
+	}
+}
+
+.skill__bar--percentage {
+	height: 16px;
+	background-color: #0e90d2;
+	@include linear-gradient(top, $site-color__light-blue, $site-color__light-blue);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3098DB', endColorstr='#3098DB', GradientType=0);
+	@media (max-width: 560px) {
+		height: 12px;
+	}
+}
+
+// Create skill class to fall back after animation
+.skill--0percent { width: 0% }
+.skill--10percent { width: 10%; }
+.skill--20percent { width: 20%; }
+.skill--30percent { width: 30%; }
+.skill--40percent { width: 40%; }
+.skill--50percent { width: 50%; }
+.skill--60percent { width: 60%; }
+.skill--70percent { width: 70%; }
+.skill--80percent { width: 80%; }
+.skill--90percent { width: 90%; }
+.skill--100percent { width: 100%; }
+
+
+
+
+
+

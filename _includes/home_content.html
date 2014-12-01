@@ -1,0 +1,85 @@
+<section class="home-content">
+	<div class="services-section">
+		<div class="ribbon-container">
+			<div class="ribbon ribbon--animation wow">
+				<div class="ribbon__content">
+					<h6 class="ribbon__text--animation wow">Services</h6>
+				</div>
+			</div>
+		</div>
+		<div class="services-section__items-container row">
+			<div class="services-section__items-container--item col-sm-4">
+				<h5>Frontend Development</h5>
+				<figure>
+					<img class="wow fadeIn" src="img/home/code-editor.png" alt="">
+				</figure>
+				<p>{{ site.data.settings.frontend_services_brief }}</p>
+				<ul>
+					{% for frontend_service in site.data.settings.frontend_services %}
+					<li>{{ frontend_service.item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="services-section__items-container--item col-sm-4">
+				<h5>Backend Development</h5>
+				<figure>
+					<img class="wow fadeIn" src="img/home/server-rack.png" alt="">
+				</figure>
+				<p>{{ site.data.settings.backend_services_brief }}</p>
+				<ul>
+					{% for backend_service in site.data.settings.backend_services %}
+					<li>{{ backend_service.item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="services-section__items-container--item col-sm-4">
+				<h5>UI/UX Design</h5>
+				<figure>
+					<img class="wow fadeIn" src="img/home/ui-design.png" alt="">
+				</figure>
+				<p>{{ site.data.settings.uiux_services_brief }}</p>
+				<ul>
+					{% for uiux_service in site.data.settings.uiux_services %}
+					<li>{{ uiux_service.item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="skills-section">
+		<div class="ribbon-container">
+			<div class="ribbon ribbon--animation wow">
+				<div class="ribbon__content">
+					<h6 class="ribbon__text--animation wow">Technical Skills</h6>
+				</div>
+			</div>
+		</div>
+		<div class="skills-section__content row">
+			<div class="col-xs-6">
+				{% for skill in site.data.settings.skills_column_one %}
+				<div class="skills-section__content--skill-container">
+					<h6>{{ skill.name }}</h6>
+					<div class="skill">
+						<div class="skill__bar">
+							<div class="skill__bar--percentage skill__animation--{{ skill.length }}percent skill--{{ skill.length }}percent wow"></div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="col-xs-6">
+				{% for skill in site.data.settings.skills_column_two %}
+				<div class="skills-section__content--skill-container">
+					<h6>{{ skill.name }}</h6>
+					<div class="skill">
+						<div class="skill__bar">
+							<div class="skill__bar--percentage skill__animation--{{ skill.length }}percent skill--{{ skill.length }}percent wow"></div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>

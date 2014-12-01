@@ -1,0 +1,114 @@
+// Compass sticky footer
+@mixin sticky-footer($footer-height, $root-selector: unquote("#root"), $root-footer-selector: unquote("#root_footer"), $footer-selector: unquote("#footer")) {
+    html, body {
+        height: 100%; 
+    }
+    #{$root-selector} {
+        clear: both;
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin-bottom: -$footer-height;
+        #{$root-footer-selector} {
+            height: $footer-height; 
+        } 
+    }
+    #{$footer-selector} {
+        clear: both;
+        position: relative;
+        height: $footer-height; 
+    } 
+}
+
+// Double borders
+@mixin multi-border($font-size) {
+    position: relative;
+    border-top: 1px solid $site-color__body;
+    border-bottom: 1px solid $site-color__body;
+    text-align: center;
+    font-family: "Proxima-Nova", "Proxima Nova", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: $font-size;
+    padding: 10px 0;
+    &::before {
+        content: '';
+        border-top: 3px solid $site-color__body;
+        position: absolute;
+        top: -8px;
+        z-index: -1;
+        left: 0;
+        right: 0;
+    }
+    &::after {
+        content: '';
+        border-bottom: 3px solid $site-color__body;
+        position: absolute;
+        z-index: -1;
+        bottom: -8px;
+        left: 0;
+        right: 0;
+    }
+}
+
+// Blog post common elements
+@mixin post-module($paragraph-font-size) {
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-bottom: 5px solid $site-color__blog-post--border-bottom;
+    p {
+        font-size: $paragraph-font-size;
+        margin: 10px 0;
+    }
+    &:hover {
+        border-bottom: 5px solid $site-color__light-blue;
+        @include transition(0.3s ease-in);
+    }
+}
+
+// Blog post byline common elements
+@mixin post-byline($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+    border-top: 1px solid $site-color__blog-post--share-border;
+    color: $site-color__blog-post--byline;
+    a {
+        color: $site-color__blog-post--byline;
+        &:hover {
+            color: $site-color__light-blue;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    i {
+        margin-right: 10px;
+        &.fa-user {
+            color: $site-color__light-blue;
+        }
+        &.fa-calendar-o {
+            color: $site-color__blog-post--calendar;
+        }
+        &.fa-comment {
+            color: $site-color__blog-post--comment;
+        }
+    }
+}
+
+
+
+
+
+
