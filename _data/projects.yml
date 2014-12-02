@@ -55,6 +55,23 @@ projects:
         - title: 'Description of Project'
           desc: 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.'
 
+    - slug: 'lemur'
+      images:
+        - image: 'lemur/imac-preview-lemur'
+          alt_text: 'imac-preview-lemur'
+        - image: 'lemur/mobile-preview-lemur'
+          alt_text: 'mobile-preview-lemur'
+      project_title: 'Lemur'
+      info_contents:
+        - title: 'Status'
+          desc: 'Completed'
+        - title: 'Current Repository/URL'
+          desc: '<a href="https://github.com/jacobtarr/lemur" target="_blank">Github</a>'
+        - title: 'Technologies Used'
+          desc: 'Ruby on Rails'
+        - title: 'Description of Project'
+          desc: 'A social network built on Ruby on Rails that utilizes real-time updates for posts. Built for a student project I am working on.'
+
 # -------------------------------
 # More Projects Gallery Slider
 # -------------------------------
@@ -63,6 +80,7 @@ more_projects_gallery_images:
 - { project_name: 'gregmauz' }
 - { project_name: 'personal' }
 - { project_name: 'syllabus' }
+- { project_name: 'lemur' }
 
 
 

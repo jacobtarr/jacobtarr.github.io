@@ -121,15 +121,18 @@ $(function loadProjectContent() {
 	var $projectGregMauz = $('#project-gregmauz');
 	var $projectPersonal = $('#project-personal');
 	var $projectSyllabus = $('#project-syllabus');
+	var $projectLemur = $('#project-lemur');
 
 	// Select project thumbnails in more-projects-gallery
 	var $thumbnailGregMauz = $('.more-projects-gallery__thumbnail--gregmauz');
 	var $thumbnailPersonal = $('.more-projects-gallery__thumbnail--personal');
 	var $thumbnailSyllabus = $('.more-projects-gallery__thumbnail--syllabus');
+	var $thumbnailLemur = $('.more-projects-gallery__thumbnail--lemur');
 
 	// Hide the non-default specific projects from DOM
 	$projectPersonal.hide();
 	$projectSyllabus.hide();
+	$projectLemur.hide();
 
 	// Function for animating scroll
 	animateScroll = function(element) {
@@ -166,6 +169,16 @@ $(function loadProjectContent() {
 		slickSliderConfig();
 		flowTypeConfig();
 		animateScroll('#project-syllabus');
+	});
+
+	// When user clicks Lemur thumbnail image
+	$thumbnailLemur.on("click", function(){
+		$projectContainer.children().hide();
+		$projectLemur.fadeIn(1100).show();
+		$('.project-gallery').unslick();
+		slickSliderConfig();
+		flowTypeConfig();
+		animateScroll('#project-lemur');
 	});
 
 });
