@@ -89,6 +89,10 @@
         margin-right: 20px;
         font-size: 16px;
         text-transform: uppercase;
+        @media (max-width: 568px) {
+            display: block;
+            line-height: 1.4;
+        }
         &:last-child {
             margin-right: 0;
         }

@@ -112,7 +112,7 @@ $(function(){
 /* Load project content
 =============================== */
 
-$(function loadProjectContent() {
+loadProjectContent = function() {
 	var $projectContainer = $('.project-container');
 	var $moreProjectsGalleryImageContainer = $('.more-projects-gallery__thumbnail');
 	var $moreProjectsGalleryImage = $('.more-projects-gallery__thumbnail img');
@@ -181,6 +181,14 @@ $(function loadProjectContent() {
 		animateScroll('#project-lemur');
 	});
 
+	
+
+}
+
+/* Initialize project content
+=============================== */
+$(function(){
+	loadProjectContent();
 });
 
 
